@@ -6,7 +6,7 @@
 
     <groupId>io.github.it346</groupId>
     <artifactId>gg-tool</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>gg-tool</name>
