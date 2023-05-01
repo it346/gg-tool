@@ -2,9 +2,6 @@ package io.github.it346.tool.utils;
 
 import io.github.it346.tool.support.BaseBeanCopier;
 import io.github.it346.tool.support.BeanProperty;
-import io.github.it346.tool.support.User;
-import io.github.it346.tool.support.UserVo;
-import org.aspectj.weaver.ast.Var;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.BeansException;
 import org.springframework.cglib.beans.BeanGenerator;
@@ -14,10 +11,8 @@ import org.springframework.util.Assert;
 
 import java.beans.PropertyDescriptor;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Stream;
 
 /**
  * 实体工具类
