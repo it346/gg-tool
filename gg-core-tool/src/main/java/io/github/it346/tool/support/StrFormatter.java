@@ -7,7 +7,7 @@ import io.github.it346.tool.utils.StringPool;
 /**
  * 字符串格式化
  *
- * @author Chill
+ * @author wg
  */
 public class StrFormatter {
 

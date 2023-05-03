@@ -6,7 +6,7 @@
 
     <groupId>io.github.it346</groupId>
     <artifactId>gg-tool</artifactId>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
     <packaging>pom</packaging>
 
     <name>gg-tool</name>
@@ -42,10 +42,11 @@
 
     <modules>
         <module>gg-core-tool</module>
+        <module>gg-core-launch</module>
     </modules>
 
     <properties>
-        <gg.tool.version>1.0.0</gg.tool.version>
+        <gg.tool.version>1.0.3</gg.tool.version>
         <java.version>1.8</java.version>
         <maven.plugin.version>3.8.1</maven.plugin.version>
 
@@ -110,6 +111,11 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
     </dependencies>
 
     <build>
@@ -172,7 +178,7 @@
 <!--                        <version>1.6.7</version>-->
 <!--                        <extensions>true</extensions>-->
 <!--                        <configuration>-->
-<!--                            <serverId>ossrh</serverId>-->
+<!--                            <serverId>oss</serverId>-->
 <!--                            <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>-->
 <!--                            <autoReleaseAfterClose>true</autoReleaseAfterClose>-->
 <!--                        </configuration>-->
@@ -241,11 +247,11 @@
                 <snapshotRepository>
                     <!--注意,此id必须与setting.xml中指定的一致-->
                     <id>oss</id>
-                    <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+                    <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
                 </snapshotRepository>
                 <repository>
                     <id>oss</id>
-                    <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+                    <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
                 </repository>
             </distributionManagement>
         </profile>
