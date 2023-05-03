@@ -1,11 +1,11 @@
 package io.github.it346.tool.config;
 
-
 import com.fasterxml.jackson.databind.ObjectMapper;
+import io.github.it346.tool.jackson.JacksonProperties;
+import io.github.it346.tool.jackson.MappingApiJackson2HttpMessageConverter;
+import io.github.it346.tool.utils.Charsets;
 import lombok.AllArgsConstructor;
-import org.springblade.core.tool.jackson.BladeJacksonProperties;
-import org.springblade.core.tool.jackson.MappingApiJackson2HttpMessageConverter;
-import org.springblade.core.tool.utils.Charsets;
+
 import org.springframework.boot.autoconfigure.AutoConfiguration;
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
@@ -26,7 +26,7 @@ import java.util.List;
 public class MessageConfiguration implements WebMvcConfigurer {
 
 	private final ObjectMapper objectMapper;
-	private final BladeJacksonProperties properties;
+	private final JacksonProperties properties;
 
 	/**
 	 * 使用 JACKSON 作为JSON MessageConverter
