@@ -6,7 +6,7 @@
 
     <groupId>io.github.it346</groupId>
     <artifactId>gg-tool</artifactId>
-    <version>1.0.3</version>
+    <version>1.0.4</version>
     <packaging>pom</packaging>
 
     <name>gg-tool</name>
@@ -43,10 +43,11 @@
     <modules>
         <module>gg-core-tool</module>
         <module>gg-core-launch</module>
+        <module>gg-core-swagger</module>
     </modules>
 
     <properties>
-        <gg.tool.version>1.0.3</gg.tool.version>
+        <gg.tool.version>1.0.4</gg.tool.version>
         <java.version>1.8</java.version>
         <maven.plugin.version>3.8.1</maven.plugin.version>
 
@@ -55,6 +56,7 @@
         <spring.cloud.version>2021.0.6</spring.cloud.version>
         <alibaba.cloud.version>2021.0.5.0</alibaba.cloud.version>
         <knife4j.version>4.1.0</knife4j.version>
+        <guava.version>31.1-jre</guava.version>
     </properties>
 
     <dependencyManagement>
@@ -164,7 +166,6 @@
     <profiles>
         <profile>
             <!--注意,此id必须与setting.xml中指定的一致,不要自作聪明改它名字-->
-<!--            <id>ossrh</id>-->
             <id>release</id>
             <activation>
                 <activeByDefault>true</activeByDefault>
@@ -172,17 +173,6 @@
             <build>
                 <!--发布到中央SNAPSHOT仓库插件-->
                 <plugins>
-<!--                    <plugin>-->
-<!--                        <groupId>org.sonatype.plugins</groupId>-->
-<!--                        <artifactId>nexus-staging-maven-plugin</artifactId>-->
-<!--                        <version>1.6.7</version>-->
-<!--                        <extensions>true</extensions>-->
-<!--                        <configuration>-->
-<!--                            <serverId>oss</serverId>-->
-<!--                            <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>-->
-<!--                            <autoReleaseAfterClose>true</autoReleaseAfterClose>-->
-<!--                        </configuration>-->
-<!--                    </plugin>-->
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-release-plugin</artifactId>
