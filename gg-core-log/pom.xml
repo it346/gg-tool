@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>gg-tool</artifactId>
+        <groupId>io.github.it346</groupId>
+        <version>1.0.5</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>gg-core-log</artifactId>
+    <name>${project.artifactId}</name>
+    <version>${gg.tool.version}</version>
+    <packaging>jar</packaging>
+
+    <dependencies>
+        <!--Blade-->
+        <dependency>
+            <groupId>io.github.it346</groupId>
+            <artifactId>gg-core-tool</artifactId>
+            <version>${gg.tool.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.github.it346</groupId>
+            <artifactId>gg-core-secure</artifactId>
+            <version>${gg.tool.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.github.it346</groupId>
+            <artifactId>gg-core-cloud</artifactId>
+            <version>${gg.tool.version}</version>
+        </dependency>
+        <!--Mybatis-->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus</artifactId>
+            <version>${mybatis.plus.version}</version>
+        </dependency>
+    </dependencies>
+</project>

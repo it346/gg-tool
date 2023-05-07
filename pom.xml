@@ -6,7 +6,7 @@
 
     <groupId>io.github.it346</groupId>
     <artifactId>gg-tool</artifactId>
-    <version>1.0.4</version>
+    <version>1.0.5</version>
     <packaging>pom</packaging>
 
     <name>gg-tool</name>
@@ -44,19 +44,29 @@
         <module>gg-core-tool</module>
         <module>gg-core-launch</module>
         <module>gg-core-swagger</module>
+        <module>gg-core-mybatis</module>
+        <module>gg-core-secure</module>
+        <module>gg-core-log</module>
+        <module>gg-core-cloud</module>
+        <module>gg-core-boot</module>
     </modules>
 
     <properties>
-        <gg.tool.version>1.0.4</gg.tool.version>
+        <gg.tool.version>1.0.5</gg.tool.version>
         <java.version>1.8</java.version>
         <maven.plugin.version>3.8.1</maven.plugin.version>
 
         <spring.version>5.3.27</spring.version>
         <spring.boot.version>2.7.10</spring.boot.version>
+        <spring.boot.admin.version>2.7.10</spring.boot.admin.version>
         <spring.cloud.version>2021.0.6</spring.cloud.version>
         <alibaba.cloud.version>2021.0.5.0</alibaba.cloud.version>
+        <alibaba.nacos.version>2.1.2</alibaba.nacos.version>
         <knife4j.version>4.1.0</knife4j.version>
         <guava.version>31.1-jre</guava.version>
+        <mica.auto.version>2.3.2</mica.auto.version>
+        <mybatis.plus.version>3.5.3.1</mybatis.plus.version>
+
     </properties>
 
     <dependencyManagement>
@@ -117,6 +127,25 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-configuration-processor</artifactId>
             <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>net.dreamlu</groupId>
+            <artifactId>mica-auto</artifactId>
+            <version>${mica.auto.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate.validator</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>6.2.0.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.retry</groupId>
+            <artifactId>spring-retry</artifactId>
         </dependency>
     </dependencies>
 
