@@ -51,7 +51,7 @@ public class SwaggerUtil {
 		return new ApiKey("Auth", TokenConstant.HEADER, "header");
 	}
 
-	public static ApiKey bladeTenant() {
+	public static ApiKey tenant() {
 		return new ApiKey("TenantId", "Tenant-Id", "header");
 	}
 

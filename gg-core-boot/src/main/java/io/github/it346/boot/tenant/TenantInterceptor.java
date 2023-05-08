@@ -1,4 +1,4 @@
-package io.github.it346.boot.props.tenant;
+package io.github.it346.boot.tenant;
 
 import com.baomidou.mybatisplus.extension.plugins.handler.TenantLineHandler;
 import com.baomidou.mybatisplus.extension.plugins.inner.TenantLineInnerInterceptor;

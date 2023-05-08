@@ -27,7 +27,7 @@ public class ApiLogListener {
 
 	private final ILogClient logService;
 	private final ServerInfo serverInfo;
-	private final Properties bladeProperties;
+	private final Properties properties;
 
 
 	@Async
@@ -36,7 +36,7 @@ public class ApiLogListener {
 	public void saveApiLog(ApiLogEvent event) {
 		Map<String, Object> source = (Map<String, Object>) event.getSource();
 		LogApi logApi = (LogApi) source.get(EventConstant.EVENT_LOG);
-		LogAbstractUtil.addOtherInfoToLog(logApi, bladeProperties, serverInfo);
+		LogAbstractUtil.addOtherInfoToLog(logApi, properties, serverInfo);
 		logService.saveApiLog(logApi);
 	}
 

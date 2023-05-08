@@ -1,4 +1,4 @@
-package io.github.it346.boot.props.config;
+package io.github.it346.boot.config;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.autoconfigure.AutoConfiguration;

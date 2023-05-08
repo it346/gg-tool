@@ -1,4 +1,4 @@
-package io.github.it346.boot.props.file;
+package io.github.it346.boot.file;
 
 import io.github.it346.tool.utils.StringPool;
 import io.github.it346.tool.utils.StringUtil;

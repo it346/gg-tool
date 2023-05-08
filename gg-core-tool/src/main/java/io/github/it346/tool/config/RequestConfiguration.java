@@ -30,12 +30,12 @@ public class RequestConfiguration {
 	 * 全局过滤器
 	 */
 	@Bean
-	public FilterRegistrationBean<RequestFilter> bladeFilterRegistration() {
+	public FilterRegistrationBean<RequestFilter> filterRegistration() {
 		FilterRegistrationBean<RequestFilter> registration = new FilterRegistrationBean<>();
 		registration.setDispatcherTypes(DispatcherType.REQUEST);
 		registration.setFilter(new RequestFilter(requestProperties, xssProperties));
 		registration.addUrlPatterns("/*");
-		registration.setName("bladeRequestFilter");
+		registration.setName("requestFilter");
 		registration.setOrder(Ordered.LOWEST_PRECEDENCE);
 		return registration;
 	}

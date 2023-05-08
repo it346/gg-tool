@@ -34,7 +34,7 @@ public class Logger implements InitializingBean {
 
 	@Override
 	public void afterPropertiesSet() throws Exception {
-		log.info(serviceId + ": BladeLogger init success!");
+		log.info(serviceId + ": GgLogger init success!");
 	}
 
 }

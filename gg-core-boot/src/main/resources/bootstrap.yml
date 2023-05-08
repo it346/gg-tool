@@ -50,8 +50,8 @@ spring:
       min-evictable-idle-time-millis: 300000
       stat-view-servlet:
         enabled: true
-        login-username: blade
-        login-password: 1qaz@WSX
+        login-username: wg
+        login-password: 123456
       web-stat-filter:
         enabled: true
         url-pattern: /*
@@ -68,14 +68,14 @@ spring:
 
 #配置日志地址
 logging:
-  config: classpath:log/logback_${blade.env}.xml
+  config: classpath:log/logback_${gg.env}.xml
 
 # mybatis
 mybatis-plus:
-  mapper-locations: classpath:org/springblade/**/mapper/*Mapper.xml
+  mapper-locations: classpath:io/github/it346/**/mapper/*Mapper.xml
   #实体扫描，多个package用逗号或者分号分隔
   typeAliasesPackage: io.github.it346.**.entity
-  #typeEnumsPackage: org.springblade.dashboard.entity.enums
+  #typeEnumsPackage: io.github.it346.dashboard.entity.enums
   global-config:
     # 关闭MP3.0自带的banner
     banner: false

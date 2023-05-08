@@ -24,14 +24,14 @@ public interface TokenConstant {
 	String OAUTH_ID = "oauth_id";
 	String CLIENT_ID = "client_id";
 	String LICENSE = "license";
-	String LICENSE_NAME = "powered by blade";
+	String LICENSE_NAME = "powered by wg";
 	String DEFAULT_AVATAR = "https://gw.alipayobjects.com/zos/rmsportal/BiazfanxmamNRoxxVxka.png";
 	Integer AUTH_LENGTH = 7;
 
 	/**
 	 * token签名
 	 */
-	String SIGN_KEY = "bladexisapowerfulmicroservicearchitectureupgradedandoptimizedfromacommercialproject";
+	String SIGN_KEY = "ggxisapowerfulmicroservicearchitectureupgradedandoptimizedfromacommercialproject";
 	/**
 	 * key安全长度，具体见：<a href="https://tools.ietf.org/html/rfc7518#section-3.2">...</a>
 	 */

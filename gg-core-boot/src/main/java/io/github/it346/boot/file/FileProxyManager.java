@@ -1,4 +1,4 @@
-package io.github.it346.boot.props.file;
+package io.github.it346.boot.file;
 
 import java.io.File;
 

@@ -30,7 +30,7 @@ import org.springframework.context.annotation.Bean;
 @ConditionalOnWebApplication
 public class VersionMappingAutoConfiguration {
 	@Bean
-	public org.springframework.boot.autoconfigure.web.servlet.WebMvcRegistrations bladeWebMvcRegistrations() {
+	public org.springframework.boot.autoconfigure.web.servlet.WebMvcRegistrations webMvcRegistrations() {
 		return new WebMvcRegistrations();
 	}
 }

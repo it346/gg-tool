@@ -12,7 +12,7 @@ import java.util.List;
  * @author wg
  */
 @Data
-@ConfigurationProperties("blade.xss")
+@ConfigurationProperties("gg.xss")
 public class XssProperties {
 
 	/**

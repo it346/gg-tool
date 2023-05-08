@@ -74,11 +74,11 @@ public class LaunchApplication {
 		props.setProperty("spring.profiles.active", profile);
 		props.setProperty("info.version", AppConstant.APPLICATION_VERSION);
 		props.setProperty("info.desc", appName);
-		props.setProperty("blade.env", profile);
-		props.setProperty("blade.name", appName);
-		props.setProperty("blade.is-local", String.valueOf(isLocalDev()));
-		props.setProperty("blade.dev-mode", profile.equals(AppConstant.PROD_CODE) ? "false" : "true");
-		props.setProperty("blade.service.version", AppConstant.APPLICATION_VERSION);
+		props.setProperty("gg.env", profile);
+		props.setProperty("gg.name", appName);
+		props.setProperty("gg.is-local", String.valueOf(isLocalDev()));
+		props.setProperty("gg.dev-mode", profile.equals(AppConstant.PROD_CODE) ? "false" : "true");
+		props.setProperty("gg.service.version", AppConstant.APPLICATION_VERSION);
 		props.setProperty("spring.main.allow-bean-definition-overriding", "true");
 		props.setProperty("spring.cloud.nacos.config.prefix", NacosConstant.NACOS_CONFIG_PREFIX);
 		props.setProperty("spring.cloud.nacos.config.file-extension", NacosConstant.NACOS_CONFIG_FORMAT);

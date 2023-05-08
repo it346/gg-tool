@@ -50,6 +50,6 @@ public class AuthInfo {
 	private long expiresIn;
 
 	@ApiModelProperty(value = "许可证")
-	private String license = "powered by blade";
+	private String license = "powered by wg";
 
 }

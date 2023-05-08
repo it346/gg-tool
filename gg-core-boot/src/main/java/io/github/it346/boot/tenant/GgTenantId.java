@@ -1,10 +1,10 @@
-package io.github.it346.boot.props.tenant;
+package io.github.it346.boot.tenant;
 
 import io.github.it346.tool.utils.RandomType;
 import io.github.it346.tool.utils.StringUtil;
 
 /**
- * blade租户id生成器
+ * 租户id生成器
  *
  * @author wg
  */

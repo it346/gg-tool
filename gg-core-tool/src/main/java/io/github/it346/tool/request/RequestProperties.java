@@ -12,7 +12,7 @@ import java.util.List;
  * @author wg
  */
 @Data
-@ConfigurationProperties("blade.request")
+@ConfigurationProperties("gg.request")
 public class RequestProperties {
 
 	/**

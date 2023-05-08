@@ -49,7 +49,7 @@ import java.util.Set;
 @RequiredArgsConstructor
 public class RestExceptionTranslator {
 
-	private final LogProperties bladeLogProperties;
+	private final LogProperties logProperties;
 
 	@ExceptionHandler(MissingServletRequestParameterException.class)
 	@ResponseStatus(HttpStatus.BAD_REQUEST)
@@ -145,7 +145,7 @@ public class RestExceptionTranslator {
 	public R handleError(Throwable e) {
 		log.error("服务器异常", e);
 		//发送服务异常事件
-		if (bladeLogProperties.getError()) {
+		if (logProperties.getError()) {
 			ErrorLogPublisher.publishEvent(e, UrlUtil.getPath(WebUtil.getRequest().getRequestURI()));
 		}
 		return R.fail(ResultCode.INTERNAL_SERVER_ERROR, (Func.isEmpty(e.getMessage()) ? ResultCode.INTERNAL_SERVER_ERROR.getMessage() : e.getMessage()));

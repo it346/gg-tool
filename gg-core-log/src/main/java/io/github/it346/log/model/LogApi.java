@@ -12,7 +12,7 @@ import java.io.Serializable;
  * @author wg
  */
 @Data
-@TableName("blade_log_api")
+@TableName("gg_log_api")
 public class LogApi extends LogAbstract implements Serializable {
 
 	private static final long serialVersionUID = 1L;

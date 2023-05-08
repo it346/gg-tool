@@ -31,7 +31,7 @@ public class ConversionService extends ApplicationConversionService {
 	 * Note: This method actually returns an {@link ConversionService}
 	 * instance. However, the {@code ConversionService} signature has been preserved for
 	 * binary compatibility.
-	 * @return the shared {@code BladeConversionService} instance (never{@code null})
+	 * @return the shared {@code ConversionService} instance (never{@code null})
 	 */
 	public static GenericConversionService getInstance() {
 		ConversionService sharedInstance = ConversionService.SHARED_INSTANCE;

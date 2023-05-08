@@ -30,7 +30,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 public class JacksonProperties {
 
 	/**
-	 * 支持 MediaType text/plain，用于和 blade-api-crypto 一起使用
+	 * 支持 MediaType text/plain，用于和 gg-api-crypto 一起使用
 	 */
 	private Boolean supportTextPlain = Boolean.FALSE;
 

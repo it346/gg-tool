@@ -1,6 +1,6 @@
-package io.github.it346.boot.props.config;
+package io.github.it346.boot.config;
 
-import io.github.it346.boot.props.resolver.TokenArgumentResolver;
+import io.github.it346.boot.resolver.TokenArgumentResolver;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.autoconfigure.AutoConfiguration;
 import org.springframework.cache.annotation.EnableCaching;

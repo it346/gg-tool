@@ -19,6 +19,6 @@ import java.lang.annotation.*;
 @EnableDiscoveryClient
 @EnableFeignClients(AppConstant.BASE_PACKAGES)
 @SpringBootApplication
-public @interface BladeCloudApplication {
+public @interface CloudApplication {
 
 }

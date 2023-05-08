@@ -1,4 +1,4 @@
-package io.github.it346.boot.props.resolver;
+package io.github.it346.boot.resolver;
 
 import io.github.it346.secure.User;
 import io.github.it346.secure.utils.SecureUtil;
@@ -10,7 +10,7 @@ import org.springframework.web.method.support.HandlerMethodArgumentResolver;
 import org.springframework.web.method.support.ModelAndViewContainer;
 
 /**
- * Token转化BladeUser
+ * Token转化user
  *
  * @author wg
  */

@@ -33,8 +33,8 @@ public class RequestFilter implements Filter {
 		}
 		// 默认 Request 包装
 		else if (!xssProperties.getEnabled() || isXssSkip(path)) {
-			HttpServletRequestWrapper bladeRequest = new HttpServletRequestWrapper((HttpServletRequest) request);
-			chain.doFilter(bladeRequest, response);
+			HttpServletRequestWrapper httpServletRequestWrapper = new HttpServletRequestWrapper((HttpServletRequest) request);
+			chain.doFilter(httpServletRequestWrapper, response);
 		}
 		// Xss Request 包装
 		else {

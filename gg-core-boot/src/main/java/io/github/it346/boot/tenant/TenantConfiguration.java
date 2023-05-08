@@ -1,4 +1,4 @@
-package io.github.it346.boot.props.tenant;
+package io.github.it346.boot.tenant;
 
 import com.baomidou.mybatisplus.extension.plugins.handler.TenantLineHandler;
 import com.baomidou.mybatisplus.extension.plugins.inner.TenantLineInnerInterceptor;
@@ -30,7 +30,7 @@ public class TenantConfiguration {
 	 */
 	@Bean
 	@Primary
-	public TenantLineHandler bladeTenantHandler(TenantProperties tenantProperties) {
+	public TenantLineHandler tenantHandler(TenantProperties tenantProperties) {
 		return new TenantHandler(tenantProperties);
 	}
 

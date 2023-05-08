@@ -1,4 +1,4 @@
-package io.github.it346.boot.props.tenant;
+package io.github.it346.boot.tenant;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -31,5 +31,5 @@ public class TenantProperties {
 	/**
 	 * 多租户系统数据表
 	 */
-	private List<String> bladeTables = Arrays.asList("blade_notice", "blade_post", "blade_log_api", "blade_log_error", "blade_log_usual");
+	private List<String> GgTables = Arrays.asList("gg_notice", "gg_post", "gg_log_api", "gg_log_error", "gg_log_usual");
 }

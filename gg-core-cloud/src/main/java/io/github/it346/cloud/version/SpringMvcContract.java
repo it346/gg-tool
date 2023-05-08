@@ -32,7 +32,7 @@ import java.lang.reflect.Method;
 import java.util.List;
 
 /**
- * 支持 blade-boot 的 版本 处理
+ * 支持 gg-boot 的 版本 处理
  *
  * @see io.github.it346.cloud.annotation.UrlVersion
  * @see io.github.it346.cloud.annotation.ApiVersion
@@ -69,8 +69,8 @@ public class SpringMvcContract extends org.springframework.cloud.openfeign.suppo
 				apiVersion = AnnotatedElementUtils.findMergedAnnotation(targetType, ApiVersion.class);
 			}
 			if (apiVersion != null && StringUtil.isNotBlank(apiVersion.value())) {
-				MediaType BladeMediaType = new MediaType(apiVersion.value());
-				data.template().header(HttpHeaders.ACCEPT, BladeMediaType.toString());
+				MediaType mediaType = new MediaType(apiVersion.value());
+				data.template().header(HttpHeaders.ACCEPT, mediaType.toString());
 			}
 		}
 	}

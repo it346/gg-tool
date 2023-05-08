@@ -1,7 +1,7 @@
-package io.github.it346.boot.props.ctrl;
+package io.github.it346.boot.ctrl;
 
-import io.github.it346.boot.props.file.File;
-import io.github.it346.boot.props.file.FileUtil;
+import io.github.it346.boot.file.FileUtil;
+import io.github.it346.boot.file.File;
 import io.github.it346.secure.User;
 import io.github.it346.secure.utils.SecureUtil;
 import io.github.it346.tool.api.R;
@@ -37,7 +37,7 @@ public class BaseController {
 	/**
 	 * 获取当前用户
 	 *
-	 * @return BladeUser
+	 * @return user
 	 */
 	public User getUser() {
 		return SecureUtil.getUser();

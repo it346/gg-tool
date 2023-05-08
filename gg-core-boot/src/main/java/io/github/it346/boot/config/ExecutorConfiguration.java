@@ -1,6 +1,6 @@
-package io.github.it346.boot.props.config;
+package io.github.it346.boot.config;
 
-import io.github.it346.boot.props.props.AsyncProperties;
+import io.github.it346.boot.props.AsyncProperties;
 import lombok.AllArgsConstructor;
 import org.springframework.aop.interceptor.AsyncUncaughtExceptionHandler;
 import org.springframework.aop.interceptor.SimpleAsyncUncaughtExceptionHandler;
@@ -29,16 +29,16 @@ import java.util.concurrent.ThreadPoolExecutor;
 })
 public class ExecutorConfiguration extends AsyncConfigurerSupport {
 
-	private final AsyncProperties bladeAsyncProperties;
+	private final AsyncProperties asyncProperties;
 
 	@Override
 	@Bean(name = "taskExecutor")
 	public Executor getAsyncExecutor() {
 		ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();
-		executor.setCorePoolSize(bladeAsyncProperties.getCorePoolSize());
-		executor.setMaxPoolSize(bladeAsyncProperties.getMaxPoolSize());
-		executor.setQueueCapacity(bladeAsyncProperties.getQueueCapacity());
-		executor.setKeepAliveSeconds(bladeAsyncProperties.getKeepAliveSeconds());
+		executor.setCorePoolSize(asyncProperties.getCorePoolSize());
+		executor.setMaxPoolSize(asyncProperties.getMaxPoolSize());
+		executor.setQueueCapacity(asyncProperties.getQueueCapacity());
+		executor.setKeepAliveSeconds(asyncProperties.getKeepAliveSeconds());
 		executor.setThreadNamePrefix("async-executor-");
 		executor.setRejectedExecutionHandler(new ThreadPoolExecutor.CallerRunsPolicy());
 		return executor;

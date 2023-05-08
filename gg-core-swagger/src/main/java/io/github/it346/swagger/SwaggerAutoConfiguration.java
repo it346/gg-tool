@@ -42,9 +42,9 @@ public class SwaggerAutoConfiguration {
 	private final OpenApiExtensionResolver openApiExtensionResolver;
 
 	/**
-	 * 引入Blade环境变量
+	 * 引入Gg环境变量
 	 */
-	private final Properties bladeProperties;
+	private final Properties properties;
 
 	@Bean
 	@ConditionalOnMissingBean
@@ -68,7 +68,7 @@ public class SwaggerAutoConfiguration {
 		swaggerProperties.getBasePath().forEach(p -> apis.paths(PathSelectors.ant(p)));
 		swaggerProperties.getExcludePath().forEach(p -> apis.paths(PathSelectors.ant(p).negate()));
 		return apis.build().securityContexts(securityContexts(swaggerProperties)).securitySchemes(securitySchemas(swaggerProperties))
-			.extensions(openApiExtensionResolver.buildExtensions(bladeProperties.getName()));
+			.extensions(openApiExtensionResolver.buildExtensions(properties.getName()));
 	}
 
 	/**
@@ -97,7 +97,7 @@ public class SwaggerAutoConfiguration {
 		if (securityReferenceList.size() == 0) {
 			securityReferenceList.add(new SecurityReference(SwaggerUtil.clientInfo().getName(), authorizationScopes));
 			securityReferenceList.add(new SecurityReference(SwaggerUtil.auth().getName(), authorizationScopes));
-			securityReferenceList.add(new SecurityReference(SwaggerUtil.bladeTenant().getName(), authorizationScopes));
+			securityReferenceList.add(new SecurityReference(SwaggerUtil.tenant().getName(), authorizationScopes));
 		}
 		return securityReferenceList;
 	}
@@ -108,7 +108,7 @@ public class SwaggerAutoConfiguration {
 	private List<SecurityScheme> securitySchemas(SwaggerProperties swaggerProperties) {
 		List<SwaggerProperties.AuthorizationApiKey> swaggerApiKeyList = swaggerProperties.getAuthorization().getAuthorizationApiKeyList();
 		if (swaggerApiKeyList.size() == 0) {
-			return Lists.newArrayList(SwaggerUtil.clientInfo(), SwaggerUtil.auth(), SwaggerUtil.bladeTenant());
+			return Lists.newArrayList(SwaggerUtil.clientInfo(), SwaggerUtil.auth(), SwaggerUtil.tenant());
 		} else {
 			List<SecurityScheme> securitySchemeList = new ArrayList<>();
 			swaggerApiKeyList.forEach(authorizationApiKey -> securitySchemeList.add(new ApiKey(authorizationApiKey.getName(), authorizationApiKey.getKeyName(), authorizationApiKey.getPassAs())));

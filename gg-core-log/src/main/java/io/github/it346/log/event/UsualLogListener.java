@@ -26,7 +26,7 @@ public class UsualLogListener {
 
 	private final ILogClient logService;
 	private final ServerInfo serverInfo;
-	private final Properties bladeProperties;
+	private final Properties properties;
 
 	@Async
 	@Order
@@ -34,7 +34,7 @@ public class UsualLogListener {
 	public void saveUsualLog(UsualLogEvent event) {
 		Map<String, Object> source = (Map<String, Object>) event.getSource();
 		LogUsual logUsual = (LogUsual) source.get(EventConstant.EVENT_LOG);
-		LogAbstractUtil.addOtherInfoToLog(logUsual, bladeProperties, serverInfo);
+		LogAbstractUtil.addOtherInfoToLog(logUsual, properties, serverInfo);
 		logService.saveUsualLog(logUsual);
 	}
 

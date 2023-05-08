@@ -17,7 +17,7 @@ import java.lang.annotation.*;
 @Retention(RetentionPolicy.RUNTIME)
 @EnableFeignClients(AppConstant.BASE_PACKAGES)
 @EnableAutoConfiguration
-public @interface EnableBladeFeign {
+public @interface EnableGgFeign {
 	/**
 	 * Alias for the {@link #basePackages()} attribute. Allows for more concise annotation
 	 * declarations e.g.: {@code @ComponentScan("org.my.pkg")} instead of

@@ -1,4 +1,4 @@
-package io.github.it346.boot.props.tenant;
+package io.github.it346.boot.tenant;
 
 /**
  * 租户常量.

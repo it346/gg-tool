@@ -1,4 +1,4 @@
-package io.github.it346.boot.props.props;
+package io.github.it346.boot.props;
 
 import lombok.Getter;
 import lombok.Setter;

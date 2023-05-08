@@ -28,7 +28,7 @@ public class LogToolAutoConfiguration {
 
 	private final ILogClient logService;
 	private final ServerInfo serverInfo;
-	private final Properties bladeProperties;
+	private final Properties properties;
 
 	@Bean
 	@ConditionalOnProperty(value = LogProperties.PREFIX + "api.enabled", havingValue = "true", matchIfMissing = true)
@@ -39,19 +39,19 @@ public class LogToolAutoConfiguration {
 	@Bean
 	@ConditionalOnProperty(value = LogProperties.PREFIX + "api.enabled", havingValue = "true", matchIfMissing = true)
 	public ApiLogListener apiLogListener() {
-		return new ApiLogListener(logService, serverInfo, bladeProperties);
+		return new ApiLogListener(logService, serverInfo, properties);
 	}
 
 	@Bean
 	@ConditionalOnProperty(value = LogProperties.PREFIX + "error.enabled", havingValue = "true", matchIfMissing = true)
 	public ErrorLogListener errorEventListener() {
-		return new ErrorLogListener(logService, serverInfo, bladeProperties);
+		return new ErrorLogListener(logService, serverInfo, properties);
 	}
 
 	@Bean
 	@ConditionalOnProperty(value = LogProperties.PREFIX + "usual.enabled", havingValue = "true", matchIfMissing = true)
-	public UsualLogListener bladeEventListener() {
-		return new UsualLogListener(logService, serverInfo, bladeProperties);
+	public UsualLogListener eventListener() {
+		return new UsualLogListener(logService, serverInfo, properties);
 	}
 
 	@Bean

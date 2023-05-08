@@ -19,7 +19,7 @@ package io.github.it346.cloud.version;
 import lombok.Getter;
 
 /**
- * blade Media Types，application/vnd.github.VERSION+json
+ * gg Media Types，application/vnd.github.VERSION+json
  *
  * <p>
  * <a href="https://developer.github.com/v3/media/">...</a>

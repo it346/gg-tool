@@ -5,7 +5,7 @@
     <parent>
         <artifactId>gg-tool</artifactId>
         <groupId>io.github.it346</groupId>
-        <version>1.0.5</version>
+        <version>1.0.6</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -21,11 +21,11 @@
             <artifactId>mybatis-plus</artifactId>
             <version>${mybatis.plus.version}</version>
         </dependency>
-        <!--Blade-->
+        <!-- gg -->
         <dependency>
             <groupId>io.github.it346</groupId>
             <artifactId>gg-core-secure</artifactId>
-            <version>1.0.5</version>
+            <version>${gg.tool.version}</version>
         </dependency>
     </dependencies>
 </project>

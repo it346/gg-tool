@@ -1,4 +1,4 @@
-package io.github.it346.boot.props.tenant;
+package io.github.it346.boot.tenant;
 
 import com.baomidou.mybatisplus.extension.plugins.handler.TenantLineHandler;
 import io.github.it346.secure.utils.SecureUtil;
@@ -52,7 +52,7 @@ public class TenantHandler implements TenantLineHandler {
 		return !(
 			(
 				(properties.getTables().size() > 0 && properties.getTables().contains(tableName))
-					|| properties.getBladeTables().contains(tableName)
+					|| properties.getGgTables().contains(tableName)
 			)
 				&& StringUtil.isNotBlank(SecureUtil.getTenantId())
 		);

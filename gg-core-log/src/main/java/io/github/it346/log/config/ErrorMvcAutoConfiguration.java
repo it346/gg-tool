@@ -33,13 +33,13 @@ import javax.servlet.Servlet;
 public class ErrorMvcAutoConfiguration {
 
 	private final ServerProperties serverProperties;
-	private final LogProperties bladeLogProperties;
+	private final LogProperties logProperties;
 
 
 	@Bean
 	@ConditionalOnMissingBean(value = ErrorAttributes.class, search = SearchStrategy.CURRENT)
 	public DefaultErrorAttributes errorAttributes() {
-		return new ErrorAttributes(bladeLogProperties);
+		return new ErrorAttributes(logProperties);
 	}
 
 	@Bean

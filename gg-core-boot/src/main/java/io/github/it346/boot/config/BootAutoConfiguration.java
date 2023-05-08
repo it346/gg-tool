@@ -1,4 +1,4 @@
-package io.github.it346.boot.props.config;
+package io.github.it346.boot.config;
 
 import io.github.it346.launch.props.Properties;
 import io.github.it346.tool.constant.SystemConstant;
@@ -44,7 +44,7 @@ public class BootAutoConfiguration {
 		me.setRemoteMode(properties.getBoolean("remote-mode", true));
 
 		//远程上传地址
-		me.setRemotePath(properties.get("remote-path", System.getProperty("user.dir") + "/work/blade"));
+		me.setRemotePath(properties.get("remote-path", System.getProperty("user.dir") + "/work/gg"));
 
 		//设定文件上传头文件夹
 		me.setUploadPath(properties.get("upload-path", "/upload"));

@@ -26,7 +26,7 @@ public class ErrorLogListener {
 
 	private final ILogClient logService;
 	private final ServerInfo serverInfo;
-	private final Properties bladeProperties;
+	private final Properties properties;
 
 	@Async
 	@Order
@@ -34,7 +34,7 @@ public class ErrorLogListener {
 	public void saveErrorLog(ErrorLogEvent event) {
 		Map<String, Object> source = (Map<String, Object>) event.getSource();
 		LogError logError = (LogError) source.get(EventConstant.EVENT_LOG);
-		LogAbstractUtil.addOtherInfoToLog(logError, bladeProperties, serverInfo);
+		LogAbstractUtil.addOtherInfoToLog(logError, properties, serverInfo);
 		logService.saveErrorLog(logError);
 	}
 

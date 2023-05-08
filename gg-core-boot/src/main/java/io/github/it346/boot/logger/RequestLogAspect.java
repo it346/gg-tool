@@ -1,4 +1,4 @@
-package io.github.it346.boot.props.logger;
+package io.github.it346.boot.logger;
 
 import io.github.it346.launch.constant.AppConstant;
 import io.github.it346.tool.utils.*;
