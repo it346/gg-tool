@@ -27,7 +27,7 @@ import javax.servlet.Servlet;
 @AutoConfiguration
 @AllArgsConstructor
 @ConditionalOnWebApplication
-@AutoConfigureBefore(ErrorMvcAutoConfiguration.class)
+@AutoConfigureBefore(org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration.class)
 @EnableConfigurationProperties(LogProperties.class)
 @ConditionalOnClass({Servlet.class, DispatcherServlet.class})
 public class ErrorMvcAutoConfiguration {
