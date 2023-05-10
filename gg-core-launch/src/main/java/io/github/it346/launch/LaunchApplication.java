@@ -4,6 +4,7 @@ import io.github.it346.launch.constant.AppConstant;
 import io.github.it346.launch.constant.NacosConstant;
 import io.github.it346.launch.constant.SentinelConstant;
 import io.github.it346.launch.service.LauncherService;
+import io.github.it346.launch.utils.INetUtil;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.core.env.*;
@@ -69,6 +70,17 @@ public class LaunchApplication {
 		String startJarPath = LaunchApplication.class.getResource("/").getPath().split("!")[0];
 		String activePros = joinFun.apply(activeProfileList.toArray());
 		System.out.println(String.format("----启动中，读取到的环境变量:[%s]，jar地址:[%s]----", activePros, startJarPath));
+
+		String ip = INetUtil.getHostIp();
+		String port = environment.getProperty("server.port");
+		String path = environment.getProperty("server.servlet.context-path");
+		System.out.println("\n----------------------------------------------------------\n\t" +
+			"blog is running! Access URLs:\n\t" +
+			"Local: \t\thttp://localhost:" + port + path + "/\n\t" +
+			"External: \thttp://" + ip + ":" + port + path + "/\n\t" +
+			"Knife4j-ui: http://" + ip + ":" + port + path + "/doc.html\n\t" +
+			"----------------------------------------------------------");
+
 		Properties props = System.getProperties();
 		props.setProperty("spring.application.name", appName);
 		props.setProperty("spring.profiles.active", profile);
