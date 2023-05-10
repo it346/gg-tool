@@ -10,7 +10,7 @@ public interface AppConstant {
 	/**
 	 * 应用版本
 	 */
-	String APPLICATION_VERSION = "1.0.10";
+	String APPLICATION_VERSION = "1.0.11";
 
 	/**
 	 * 基础包
