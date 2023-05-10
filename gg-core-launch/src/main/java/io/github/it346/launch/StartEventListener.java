@@ -30,8 +30,13 @@ public class StartEventListener {
 		log.info("---[{}]---启动完成，当前使用的端口:[{}]，环境变量:[{}]---", appName, localPort, profile);
 
 		String ip = INetUtil.getHostIp();
-		String port = environment.getProperty("server.port");
+		String port = environment.getProperty("server.port") == null ? "8080" : environment.getProperty("server.port");
 		String path = environment.getProperty("server.servlet.context-path");
+
+		if (path == null || path.equals("/")) {
+			path = "";
+		}
+
 		System.out.println("\n----------------------------------------------------------\n\t" +
 			appName + " is running! Access URLs:\n\t" +
 			"Local: \t\thttp://localhost:" + port + path + "/\n\t" +
