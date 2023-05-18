@@ -40,7 +40,7 @@ public class SwaggerProperties {
 	/**
 	 * 版本
 	 **/
-	private String version = "1.0.11";
+	private String version = "1.1.0";
 	/**
 	 * 许可证
 	 **/

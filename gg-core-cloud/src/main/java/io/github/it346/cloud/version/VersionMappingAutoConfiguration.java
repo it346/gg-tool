@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Bean;
 
 /**
  * url版本号处理
- *
+ * <p>
  * 参考：<a href="https://gitee.com/lianqu1990/spring-boot-starter-version-mapping">...</a>
  *
  * @author wg

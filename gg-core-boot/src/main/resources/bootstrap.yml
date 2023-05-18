@@ -101,7 +101,7 @@ mybatis-plus:
 swagger:
   title: GG 接口文档系统
   description: GG 接口文档系统
-  version: 1.0.11
+  version: 1.1.0
   license: Powered By WG
   licenseUrl: https://github.com/it346/gg-tool
   terms-of-service-url: https://github.com/it346/gg-tool

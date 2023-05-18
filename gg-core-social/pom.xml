@@ -9,23 +9,27 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>gg-core-mybatis</artifactId>
+    <artifactId>gg-core-social</artifactId>
     <name>${project.artifactId}</name>
     <version>${gg.tool.version}</version>
     <packaging>jar</packaging>
 
     <dependencies>
-        <!--Mybatis-->
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus</artifactId>
-            <version>${mybatis.plus.version}</version>
-        </dependency>
         <!-- gg -->
         <dependency>
             <groupId>io.github.it346</groupId>
-            <artifactId>gg-core-secure</artifactId>
+            <artifactId>gg-core-tool</artifactId>
             <version>${gg.tool.version}</version>
+        </dependency>
+        <!-- 第三方登陆 -->
+        <dependency>
+            <groupId>me.zhyd.oauth</groupId>
+            <artifactId>JustAuth</artifactId>
+            <version>1.15.8</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
         </dependency>
     </dependencies>
 </project>
