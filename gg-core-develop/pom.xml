@@ -9,23 +9,35 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>gg-core-mybatis</artifactId>
+    <artifactId>gg-core-develop</artifactId>
+
     <name>${project.artifactId}</name>
     <version>${gg.tool.version}</version>
     <packaging>jar</packaging>
 
     <dependencies>
-        <!--Mybatis-->
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus</artifactId>
-            <version>${mybatis.plus.version}</version>
-        </dependency>
-        <!-- gg -->
+        <!--gg-->
         <dependency>
             <groupId>io.github.it346</groupId>
-            <artifactId>gg-core-secure</artifactId>
+            <artifactId>gg-core-tool</artifactId>
             <version>${gg.tool.version}</version>
+        </dependency>
+        <!--Mybatis-Plus-->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-generator</artifactId>
+            <version>${mybatis.plus.generator.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-extension</artifactId>
+            <version>${mybatis.plus.version}</version>
+        </dependency>
+        <!--Velocity-->
+        <dependency>
+            <groupId>org.apache.velocity</groupId>
+            <artifactId>velocity</artifactId>
+            <version>1.7</version>
         </dependency>
     </dependencies>
 </project>

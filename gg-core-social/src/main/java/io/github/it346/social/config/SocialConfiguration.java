@@ -11,7 +11,6 @@ import org.springframework.context.annotation.Bean;
 
 /**
  * @author wg
- * @date 2023-05-18
  */
 @AutoConfiguration
 @EnableConfigurationProperties(SocialProperties.class)

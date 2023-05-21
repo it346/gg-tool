@@ -17,7 +17,7 @@ import org.springframework.core.annotation.Order;
 import org.springframework.core.env.Environment;
 
 /**
- * blade 负载均衡策略
+ * 负载均衡策略
  *
  * @author wg
  */

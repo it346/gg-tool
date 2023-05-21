@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * @author wg
- * @date 2023-05-18
  */
 public class SocialUtil {
 

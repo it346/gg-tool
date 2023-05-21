@@ -6,7 +6,7 @@
 
     <groupId>io.github.it346</groupId>
     <artifactId>gg-tool</artifactId>
-    <version>1.1.0</version>
+    <version>1.1.1</version>
     <packaging>pom</packaging>
 
     <name>gg-tool</name>
@@ -51,10 +51,11 @@
         <module>gg-core-boot</module>
         <module>gg-core-loadbalancer</module>
         <module>gg-core-social</module>
+        <module>gg-core-develop</module>
     </modules>
 
     <properties>
-        <gg.tool.version>1.1.0</gg.tool.version>
+        <gg.tool.version>1.1.1</gg.tool.version>
         <java.version>1.8</java.version>
         <maven.plugin.version>3.8.1</maven.plugin.version>
 
@@ -64,10 +65,12 @@
         <spring.cloud.version>2021.0.6</spring.cloud.version>
         <alibaba.cloud.version>2021.0.5.0</alibaba.cloud.version>
         <alibaba.nacos.version>2.1.2</alibaba.nacos.version>
+
         <knife4j.version>4.1.0</knife4j.version>
         <guava.version>31.1-jre</guava.version>
         <mica.auto.version>2.3.2</mica.auto.version>
         <mybatis.plus.version>3.5.3.1</mybatis.plus.version>
+        <mybatis.plus.generator.version>3.5.3.1</mybatis.plus.generator.version>
 
     </properties>
 
